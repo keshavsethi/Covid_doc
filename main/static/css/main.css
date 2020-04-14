@@ -1,5 +1,6 @@
 body{
     overflow: hidden;
+    font-family: europa, sans-serif;
 }
 #nav {
     border: none;
@@ -54,9 +55,9 @@ margin: 0px;
 }
 
 .slidebar ul a {
-	color:#676796;
+	color:#15135B;
 	text-decoration: none;
-    font-size: 25px;
+    font-size: 28px;
     font-weight: 10px;
     box-sizing:border-box;
     font-weight: bolder;
@@ -108,7 +109,8 @@ margin: 0px;
 .li-head{
     position: relative;
     left:20px;
-    color:#74a4f3
+    color:#4B7FFB;
+    font-size: 23;
 }
 
 form{
