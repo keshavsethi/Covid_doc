@@ -91,6 +91,7 @@ input[type=submit] {
 }
 .heading_child{
 	display: inline-block;
+	padding-left: 10px;
 	margin-right: 5vw;
 	color: #4B7FFB;
 	font-size: 20px;
@@ -130,5 +131,5 @@ input[type=submit] {
 .sidebar li a:hover {
 	border-radius: 20px;
 	background-color: #C6D4F8;
-	
+
 }
