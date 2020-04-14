@@ -96,3 +96,10 @@ input[type=submit]{
 }
 input[type=submit]::placeholder {
 }
+
+input {
+	outline:none;
+   }
+input:focus::placeholder {
+	color: transparent;
+  }
