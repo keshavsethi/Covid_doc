@@ -4,7 +4,9 @@
 <!-- <link rel="stylesheet" type="text/css" href="../static/css/main.csss">  -->
 <link rel="stylesheet" type="text/css" href="../static/css/general.css">
 </head>
-<body >
+<script src="../static/js/maps.js" ></script>
+
+<body>
   <div class="main_container">
     <div id="nav" >
         <img id="icon-nav" src="../static/images/Group 29.png"> </img>
@@ -31,22 +33,14 @@
         <div class="sidebar">
         <div class="heading_child">Heading</div>
           <ul>
-            <li><a href="#" >Notification</a></li>
+            <li><a href="../template/general_public.html" >Notification</a></li>
             <li><a href="#">People</a></li>
             <li><a href="#">Hotspots</a></li>
-            <li><a href="../template/maps.html">Maps</a></li>
+            <li><a href="#">Maps</a></li>
           </ul>
         </div>
         <div class="workarea">
-          <div class="notification_box">
-            <div class="heading_child" style="margin-bottom: 2vh;">Heading</div>
-            <div class="notification_card"></div>
-            <div class="notification_card"></div>
-            <div class="notification_card"></div>
-          </div>
-          <div class="notification_box">
-            <div class="heading_child">Heading</div>
-            
+            <div id="map-canvas"></div>
           </div>
         </div>
       </div>
@@ -54,4 +48,7 @@
   </div>
 
 </body>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDASKMCnIeiR6sPy3-1D7oXigs9JHYqxRI&callback=initMap'></script>
+
 </html>
