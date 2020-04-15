@@ -3,7 +3,7 @@
     // var json = [{"id":48,"title":"Helgelandskysten","longitude":"12.63376","latitude":"66.02219"},{"id":46,"title":"Tysfjord","longitude":"16.50279","latitude":"68.03515"},{"id":44,"title":"Sledehunds-ekspedisjon","longitude":"7.53744","latitude":"60.08929"},{"id":43,"title":"Amundsens sydpolferd","longitude":"11.38411","latitude":"62.57481"},{"id":39,"title":"Vikingtokt","longitude":"6.96781","latitude":"60.96335"},{"id":6,"title":"Tungtvann- sabotasjen","longitude":"8.49139","latitude":"59.87111"}];
     // var json_clone;
     // // window.onload = function() {
-    // //     var url = 	'http://139.59.85.163/main/get_location/';
+    // //     var url = 	'    ';
     // //   var xhttp = new XMLHttpRequest();
     // //   xhttp.onreadystatechange = function() {
     // //         if ( this.readyState == 4 && this.status == 200 ) {
@@ -42,7 +42,8 @@
     // }
 
 
-// This is temporary as i dont know api endpoints
+
+// This is temporary as i dont know api endpoints I will update it during integration
     var map;
     function initMap() {
       map = new google.maps.Map(

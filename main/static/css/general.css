@@ -156,3 +156,11 @@ input[type=submit] {
 	z-index: 100;
 	padding: 0;
   }
+
+  #map-hotspot {
+	height: 50vh;
+	width: 100vh;
+	margin: 10vh;
+	z-index: 100;
+	padding: 0;
+  }
