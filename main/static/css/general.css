@@ -151,12 +151,20 @@ input[type=submit] {
 
 #map-canvas {
 	height: 50vh;
-	width: 100vh;
-	margin: 10vh;
+	width: 40vw;
+	margin-top: 3vh;
+	margin-right:2vw;
 	z-index: 100;
 	padding: 0;
   }
-
+  #map-canvas-dashboard {
+	height: 60vh;
+	width: 25vw;
+	display: inline-block;
+	margin: 6vh;
+	z-index: 100;
+	padding: 0;
+  }
   #map-hotspot {
 	height: 50vh;
 	width: 100vh;
@@ -164,3 +172,22 @@ input[type=submit] {
 	z-index: 100;
 	padding: 0;
   }
+
+  .notification_card_big{
+	width: 96%;
+	background-color: white;
+	border-radius: 10px;
+	height: 70vh;
+	margin-bottom: 3vh;
+	box-shadow: 0px 9px 15px #B47C331A;
+}
+
+.notification_card_small{
+	width: 56%;
+	background-color: white;
+	border-radius: 10px;
+	height: 30vh;
+	margin-left: 10vh;
+	margin-top:5vh;
+	box-shadow: 0px 9px 15px #B47C331A;
+}
