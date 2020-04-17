@@ -1,0 +1,13 @@
+.notification_card_big{
+	padding-top: 5vh !important;
+	padding-bottom: 5vh !important;
+	min-height: 20vh;
+}
+.notification_card_big>div{
+	line-height: 20px;
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 4vh;
+    /* margin-top: 1vh; */
+    padding-left: 3vw;
+}

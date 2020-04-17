@@ -3,6 +3,8 @@
 <title>Covid-19 Doctor App</title>   
 <!-- <link rel="stylesheet" type="text/css" href="../static/css/main.csss">  -->
 <link rel="stylesheet" type="text/css" href="../static/css/general.css">
+<link rel="stylesheet" type="text/css" href="../static/css/dashboard.css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="../static/js/dashboard.js" ></script>
 </head>
 <body >
@@ -19,9 +21,11 @@
     <div class="infobox">
       <div class="searchbox">
         <h2 style="padding-top: 2vh;">Search</h2>
-              <form class="search-form" action="">
-                <input type="text" id="search-input"  placeholder="Search ">      
-                <input type="submit" value="search" id="button">
+              <form class="search-form" id="SearchForm">
+                <input type="text" id="search_input"  placeholder="Search " >      
+                <button type="button" value="Search" id="mybutton" onclick="getValue();">
+                  Search
+                </button>
               </form>
       </div>
       <!-- <div class="heading_bar">
@@ -42,10 +46,21 @@
           <div class="notification_box">
             <div class="heading_child" style="margin-bottom: 2vh;">Heading</div>
             <div class="notification_card_big">
-          
+              <div id="name_tag"></div>
+              <div id="state_tag"></div>
+              <div id="dob_tag"></div>
+              <div id="probability_tag"></div>
+              <div id="mobile_tag"></div>
+              <div id="email_tag"></div>
+              <div id="device_chain">
+                <ol id="device_list">
+                  
+                </ol>
+              </span>
             </div>
          
           </div>
+        </div>
           <div class="notification_box">
            
              <div id="map-canvas-dashboard"></div>
