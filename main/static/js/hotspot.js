@@ -1,7 +1,4 @@
-
-
 var map;
-
 var json;
 var json_clone;
 window.onload = function() {
@@ -38,5 +35,4 @@ function initialize(json) {
       map: map,
       name: obj.name 
     });
-    // addClicker(marker, obj);
   }}

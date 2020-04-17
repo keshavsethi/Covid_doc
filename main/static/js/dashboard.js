@@ -83,13 +83,8 @@ function getTrack(phno){
                     map: map
                   });
                 }
-
-              
-             
             }
         }
-
-
     });
     return data;
 }

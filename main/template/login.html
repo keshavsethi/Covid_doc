@@ -3,6 +3,7 @@
 <head>
 	<title>Login</title>
 	<link rel="stylesheet" type="text/css" href="../static/css/login.css">
+	
 </head>
 <body>
 
@@ -12,18 +13,18 @@
 			<a href="#">DocApp</a>
 		</div>
 		<div>
-		  <form action="/action_page.php">
+		  <form method="POST" onsubmit="return check();">
 		  	<h2>Enter your credentials</h2>
-		    <input type="text" id="email_id"  placeholder="Your Email ID..">
-
-		    <input type="text" id="password"  placeholder="Your password..">
-
+		    <input type="text" id="email_id"  placeholder="Email ID">
+            <input type="text" id="username"  placeholder="Username">
+		    <input type="text" id="password"  placeholder="Password">
+            <span id='message'></span>
 		    <input type="submit" value="Login">
 		  </form>
 		</div>
 
 
-
+<script src="../static/js/login.js"></script>
 
 	</div>
 </body>
