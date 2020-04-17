@@ -4,7 +4,6 @@
 <!-- <link rel="stylesheet" type="text/css" href="../static/css/main.csss">  -->
 <link rel="stylesheet" type="text/css" href="../static/css/general.css">
 </head>
-<script src="../static/js/maps.js" ></script>
 
 <body>
   <div class="main_container">
@@ -46,7 +45,12 @@
           </div>
           <div class="notification_box">
             <div class="heading_child">Details</div>
-             <div class="notification_card_small"></div>
+             <div id="notification_card_small">
+             <h4 id="details_name"></h4>
+             <h4 id="details_lat"></h4>
+             <h4 id="details_long"></h4>
+             
+             </div>
             
           </div>
         </div>
@@ -55,7 +59,9 @@
   </div>
 
 </body>
+
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDASKMCnIeiR6sPy3-1D7oXigs9JHYqxRI&callback=initMap'></script>
 
+<script src="../static/js/maps.js" ></script>
 </html>

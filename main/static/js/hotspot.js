@@ -1,35 +1,33 @@
 
-var map;
-function initMap() {
-  map = new google.maps.Map(
-      document.getElementById('map-hotspot'),
-      {center: new google.maps.LatLng(-33.91722, 151.23064), zoom: 16});
-  var icons = {
-    isolation: {
-      icon: ''
-    },
-    danger_zone: {
-      icon: '../static/images/icon.png'
-    }
-  };
-  var features = [
-    {
-      position: new google.maps.LatLng(-33.91721, 151.22630),
-      type: 'danger_zone'
-    }, {
-      position: new google.maps.LatLng(-33.916988, 151.233640),
-      type: 'danger_zone'
-    },  {
-      position: new google.maps.LatLng(-33.91818154739766, 151.2346203981781),
-      type: 'danger_zone'
-    }
-  ];
 
- 
-  for (var i = 0; i < features.length; i++) {
-      var mag = 20*(i+1);
+var map;
+
+var json;
+var json_clone;
+window.onload = function() {
+	var url = 	'https://covihack.pythonanywhere.com/api/highriskplaces';
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+		if ( this.readyState == 4 && this.status == 200 ) {
+			var json = JSON.parse(xhttp.responseText);
+      initialize(json);
+console.log(json[0].name);
+}}
+xhttp.open("GET", url, true);
+xhttp.send({'request': "authentication token"});
+}
+function initialize(json) {
+  var mapOptions = {
+    zoom: 12,
+    center: new google.maps.LatLng( json[60].latitude, json[60].longitude)
+  };
+  map = new google.maps.Map(document.getElementById('map-hotspot'), mapOptions);
+  for(var i = 0; i < json.length; i++) {
+    var mag = 0.5*(i+1);
+    // Current object
+    var obj = json[i];
     var marker = new google.maps.Marker({
-      position: features[i].position,
+      position: new google.maps.LatLng(obj.latitude,obj.longitude),
       icon: {
         path: google.maps.SymbolPath.CIRCLE,
         scale: mag,
@@ -37,7 +35,8 @@ function initMap() {
         fillOpacity: 0.35,
         strokeWeight: 0
       },
-      map: map
+      map: map,
+      name: obj.name 
     });
-  };
-}
+    // addClicker(marker, obj);
+  }}
