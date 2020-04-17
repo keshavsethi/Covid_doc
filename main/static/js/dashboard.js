@@ -1,7 +1,8 @@
 
 // get the value of number entered in the box
 function getValue(){
-  console.log("in");
+
+  // console.log("in");
   var str = document.getElementById("search_input").value;
   if(str != ""){
     getTrack(str);
@@ -18,8 +19,15 @@ function getTrack(phno){
             var obj = JSON.parse;
             var x = data;
             // console.log(data);
-            console.log(x);
-            console.log(x.Name);
+            // console.log(x);
+            // console.log(x.Name);
+
+            // clear the existing li elements of previous result
+
+            $(".contacted").remove();
+            $("#map-canvas-dashboard").remove();
+            $("#map_zone").append('<div id="map-canvas-dashboard"></div>');
+
             // =================================filling the data for the box===================================================
 
             $("#name_tag").text("Name: "+x.Name);
@@ -29,17 +37,26 @@ function getTrack(phno){
             $("#dob_tag").text("DOB: "+x.DateOfBirth);
             $("#probability_tag").text("Probability: "+x.Probability);
 
-            console.log(x.devices_connected.value);
-            // for(var i = 0; i < x.devices_connected.length;i++){
-            //   $("#device_list").append('<li>Came in proximity to '+x.devices_connected[i]+'on '+x.devices_connected[i].last+' </li>');
-            // }
+            // console.log(x.devices_connected);
+            for(var i = 0; i < x.devices_connected.length;i++){
+              $("#device_list").append('<li>Came in proximity to '+x.devices_connected[i].Name+', Mobile Number: '+x.devices_connected[0].Mobile+' </li>');
+            }
             //temporary
-            $("#device_list").append('<li>Came in proximity to '+ x.devices_connected +'on '+x.devices_connected.last+' </li>');
+            // $("#device_list").append('<li class="contacted">Came in proximity to '+ x.devices_connected[0].Name +', Mobile Number: '+x.devices_connected[0].Mobile+' </li>');
 
 
 
-            // ==============================================================
-       
+            // =========================hiding map when data not being passed=====================================
+              // if(x.timestamps == 'undefined' ){
+              //   // console.log("hidepls");
+              //   $("#map-canvas-dashboard").css("display","none");
+              // }
+              // else{
+              //   $("#map-canvas-dashboard").css("display","");                
+              // }
+
+
+            // =============================================================
             var map;
             initialize(x);
             function initialize(x) {
