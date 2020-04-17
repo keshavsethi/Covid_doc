@@ -39,7 +39,7 @@ function getTrack(phno){
 
             // console.log(x.devices_connected);
             for(var i = 0; i < x.devices_connected.length;i++){
-              $("#device_list").append('<li>Came in proximity to '+x.devices_connected[i].Name+', Mobile Number: '+x.devices_connected[0].Mobile+' </li>');
+              $("#device_list").append('<li>Came in proximity to '+x.devices_connected[i].Name+',<br> Mobile Number: '+x.devices_connected[0].Mobile+' </li>');
             }
             //temporary
             // $("#device_list").append('<li class="contacted">Came in proximity to '+ x.devices_connected[0].Name +', Mobile Number: '+x.devices_connected[0].Mobile+' </li>');
