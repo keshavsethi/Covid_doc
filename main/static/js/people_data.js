@@ -20,7 +20,8 @@ function getPeopleInfo(){
                     { data: 'Home' },
                     { data: 'DateOfBirth' },
                     { data: 'Mobile' },
-                    { data: 'Email' }
+                    { data: 'Email' },
+                    { data: 'Probability' }
                 ]
             } );
 

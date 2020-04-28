@@ -25,7 +25,7 @@ function check(event) {
         }).then(function(data) {
             document.getElementById("message").innerHTML = data.encoded;
         }).catch(function(error) {
-            document.getElementById("message").innerHTML = "Wrong Credentials, Try again";
+            document.getElementById("message").innerHTML = "";  //message 
         });
     return false;
 }
