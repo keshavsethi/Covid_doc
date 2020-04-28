@@ -1,0 +1,40 @@
+body{
+    overflow-x: hidden;
+    font-family: europa, sans-serif;
+}
+#nav {
+    border: none;
+    background-color: white ;
+    height:10%;
+    width:100%;
+    z-index: 10;
+
+}
+#heading-main{
+    color: #15135e;
+    position: absolute;
+    font-size: 35px;
+    top: -10px;
+    left: 20vw;
+}
+#icon-nav{
+    height:7vh;
+    position: absolute;
+    left: 15vw;
+    top:10px;
+}
+#grey_box{
+    background-color:#e7ebed;
+    position: absolute;
+    top:12%;
+    height:50vh;
+    width:100%;
+}
+#heading_name {
+    position: relative;
+    top:50px;
+    left:60%;
+    color:#7246fd;
+    font-size: 40px;
+    font-weight: 400;
+}
